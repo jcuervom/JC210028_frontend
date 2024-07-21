@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "ng deploy --repo=https://github.com/jcuervom/JC210028_frontend.git --base-href=https://jcuervom.github.io/JC210028_frontend/"
   },
   "private": true,
   "dependencies": {
