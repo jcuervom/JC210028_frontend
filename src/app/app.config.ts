@@ -13,8 +13,8 @@ export const appConfig: ApplicationConfig = {
       domain: 'jcuervom.eu.auth0.com',
       clientId: 'cX7DLjRB0PVHdFDCgSrvRXDgRudyEx30',
       authorizationParams: {
-        redirect_uri: window.location.origin,
-        callbackURL: window.location.origin,
+        redirect_uri: 'https://debt-manager.jcuervom.engineer',
+        callbackURL: 'https://debt-manager.jcuervom.engineer',
       },
     }),
   ],
