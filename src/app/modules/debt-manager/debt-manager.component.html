@@ -1,1 +1,30 @@
-<p>debt-manager works!</p>
+<div>
+  <h2>Gestor de Deudas</h2>
+  <form
+    (submit)="
+      addDebt(
+        creditor.value,
+        amount.valueAsNumber,
+        currency.value,
+        dueDate.value
+      )
+    "
+  >
+    <input type="text" #creditor placeholder="Acreedor" required />
+    <input type="number" #amount placeholder="Monto" required />
+    <select #currency required>
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+      <option value="ARS">ARS</option>
+    </select>
+    <input type="date" #dueDate placeholder="Fecha de Vencimiento" required />
+    <button type="submit">Añadir Deuda</button>
+  </form>
+
+  <ul>
+    <li *ngFor="let debt of debts">
+      {{ debt.creditor }} - {{ debt.amount }} - {{ debt.dueDate | date }}
+      <button (click)="deleteDebt(debt._id)">Eliminar</button>
+    </li>
+  </ul>
+</div>
