@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DebtService {
   private apiUrl = 'https://ms-debt-manager.jcuervom.engineer/api/debts';

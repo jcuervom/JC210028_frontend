@@ -7,4 +7,12 @@ export const routes: Routes = [
     path: '',
     component: AppComponent,
   },
+  {
+    path: 'debts',
+    canActivate: [AuthGuard],
+    loadChildren: () =>
+      import('./modules/debt-manager/debt-manager.module').then(
+        (m) => m.DebtManagerModule,
+      ),
+  },
 ];
